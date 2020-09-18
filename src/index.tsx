@@ -37,3 +37,16 @@ const logTodo = (id: number, title: string, completed: boolean) => {
 const json = '{"x": 10, "y": 20}';
 const coordinates: { x: number; y: number } = JSON.parse(json);
 console.log(coordinates);
+
+//NOW THIS WILL RETURN TYPE NUMBER INSTEAD OF ANY
+
+//Now lets try the declare a variable on one line but initialize later on
+let words = ["red", "blue", "yellow"];
+//this is the declarasation of foundWord
+let foundWord: boolean;
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === "green") {
+    //this is the initialisation of foundWord
+    foundWord = true;
+  }
+}
