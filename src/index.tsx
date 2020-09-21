@@ -50,3 +50,13 @@ for (let i = 0; i < words.length; i++) {
     foundWord = true;
   }
 }
+
+//Another example is that you can asign more than one type.
+let numbers = [-10, -1, 12];
+let numberAboveZero: boolean | number = false;
+
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > 0) {
+    numberAboveZero = numbers[i];
+  }
+}
