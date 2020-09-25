@@ -2,11 +2,7 @@ import React from "react";
 
 // INTERFACES => Creates a new type, describing the property names and value types of an object
 
-interface Vehicle {
-  name: string;
-  year: number;
-  broken: boolean;
-  sold: Date;
+interface Reportable {
   summary(): string;
 }
 
@@ -20,8 +16,18 @@ const oldFord = {
   },
 };
 
-const printVehicle = (vehicle: Vehicle): void => {
-  console.log(vehicle.summary());
+const drink = {
+  color: "orange",
+  carbonated: true,
+  sugar: 40,
+  summary(): string {
+    return `The color is ${this.color}`;
+  },
 };
 
-printVehicle(oldFord);
+const printItem = (item: Reportable): void => {
+  console.log(item.summary());
+};
+
+printItem(oldFord);
+printItem(drink);
